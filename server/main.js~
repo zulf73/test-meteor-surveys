@@ -1,0 +1,6 @@
+import { Meteor } from 'meteor/meteor';
+Meteor.startup(() => {
+    var url = "mongodb+srv://unique:unique@cluster0.3cmqe.mongodb.net/<dbname>?retryWrites=true&w=majority";
+
+    // code to run on server at startup
+});

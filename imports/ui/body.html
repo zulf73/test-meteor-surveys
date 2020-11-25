@@ -1,0 +1,20 @@
+<body>
+    <div class="container">
+      <header>
+      <h1>Test Meteor Surveys</h1>
+
+      {{#if currentUser}}
+        <form class="new-task">
+            <input type="text" name="text" placeholder="Type to add new tasks" />
+        </form>
+      {{/if}}
+
+      </header>
+  
+      <ul>
+        {{#each surveys}}
+          {{> survey}}
+        {{/each}}
+      </ul>
+    </div>
+  </body>
