@@ -1,9 +1,8 @@
 import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 import { ReactiveDict } from 'meteor/reactive-dict';
-
 import { Surveys } from '../api/surveys.js';
-
+import { Session } from 'meteor/session';
 import './survey.js';
 import './body.html';
 
