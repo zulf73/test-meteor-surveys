@@ -3,8 +3,9 @@ import { Template } from 'meteor/templating';
 import { ReactiveDict } from 'meteor/reactive-dict';
 import { Surveys } from '../api/surveys.js';
 import { Session } from 'meteor/session';
-import './survey.js';
 import './body.html';
+import './survey.js';
+
 
 Template.body.onCreated(function bodyOnCreated() {
     this.state = new ReactiveDict();
@@ -14,10 +15,9 @@ Template.body.onCreated(function bodyOnCreated() {
 Template.body.helpers({
     surveys() {
         const instance = Template.instance();
-        // Otherwise, return all of the tasks
         var s = Surveys.find({}, { sort: { createdAt: -1 } });
-	console.log(s);
-	return s;
+	      console.log(s);
+	      return s;
     },
 });
 

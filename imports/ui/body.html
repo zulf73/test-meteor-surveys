@@ -2,19 +2,17 @@
     <div class="container">
       <header>
       <h1>Test Meteor Surveys</h1>
-
-      {{#if currentUser}}
-        <form class="new-task">
-            <input type="text" name="text" placeholder="Type to add new tasks" />
-        </form>
-      {{/if}}
-
       </header>
-  
+      <p>hello</p>
+
       <ul>
-        {{#each surveys}}
+        {{#each s in surveys}}
+          <p>{{s.name}}</p>
           {{> survey}}
         {{/each}}
       </ul>
+    
     </div>
   </body>
+
+
